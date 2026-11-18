@@ -34,11 +34,11 @@
 
 | # | 题目（简） | 期刊/会议 | 年份 | 一作 | 等级 |
 |---|---|---|---|---|---|
-| 01 | Effects of current load on wear and fretting corrosion of gold-plated electrical contacts | Elsevier（Tribology 类） | 2013 | Ren | **S** |
+| 01 | Effects of current load on wear and fretting corrosion of gold-plated electrical contacts | Tribology International | 2013 | Ren | **S** |
 | 02 | Role of Sphere Indenter in Measuring Contact Resistance of Flat Rivets | IEICE Trans. Electron. | 2014 | Ren | A |
-| 03 | Research on fretting regimes of gold-plated copper alloy … amplitude and frequency combinations | Elsevier（Tribology 类） | 2014 | Ren | **S** |
-| 04 | Effects of temperature on fretting corrosion behaviors of gold-plated copper alloy contacts | Elsevier（Tribology 类） | 2014 | Ren | A |
-| 05 | Effects of frequency on the intermittent failure phenomena … under fretting conditions | 期刊（作者署名为缩写） | ~2015 | Ren | A |
+| 03 | Research on fretting regimes of gold-plated copper alloy … amplitude and frequency combinations | Wear | 2014 | Ren | **S** |
+| 04 | Effects of temperature on fretting corrosion behaviors of gold-plated copper alloy contacts | Tribology International | 2014 | Ren | A |
+| 05 | Effects of frequency on the intermittent failure phenomena … under fretting conditions | Materials Research Innovations | 2015 | Ren | A |
 | 06 | Preliminary Study of Electrical Contact Behaviors of Au-plated Material at Super Low Making/Breaking Velocity | IEICE Trans. Electron. | 2015 | Ren | A |
 | 07 | Surface Adhesion Phenomena … at Superlow Making/Breaking Speed | IEEE TCPMT | 2015 | Ren | A |
 | 08 | Intermittent Molten Bridge Phenomena … Superlow Opening Speed | IEEE TCPMT | 2016 | Ren | A ⚠ 与 10 高度重复 |
@@ -56,7 +56,7 @@
 | 20 | Contact Sliding Behavior for Flexible Spring Components | IEEE TCPMT | 2019 | C. Zhang | B |
 | 21 | Static Contact Behaviors of Rod and Spring for MEMS Relay | IEEE TCPMT | 2019 | C. Zhang | B |
 | 22 | Electrical Contact Resistance of Contact Bodies With Cambered Surface | IEEE Access（开放获取） | 2020 | Ren | A |
-| 23 | Contact Welding Characteristics of Electromechanical Relays | IEEE TIE（录用稿） | 2020 | **待确认**（PDF 中没有作者行，Ren 为通讯作者） | B（暂定） |
+| 23 | Contact Welding Characteristics of Electromechanical Relays | IEEE TIE（录用稿） | 2020 | X. Zhang（Ren 为通讯作者） | B |
 | 24 | Material Welding Characteristics for Low Current Switching Devices | MDPI Materials（开放获取） | 2020 | X. Zhang | B |
 | 25 | Contact welding strength measurement … inrush electrical current | Rev. Sci. Instrum. | 2020 | Ren | A |
 | 26 | Novel experimental evaluation method of welding characteristics | 会议论文 | — | X. Zhang | B |
@@ -338,4 +338,4 @@ description: >-
 1. **§2.2 风格与错误**：采用“模仿风格、修正语法”，即 `fidelity_level: balanced` 为默认值。
 2. **§4 公开仓库的两层结构**：同意。受版权保护的原文切片只放在本地 `examples.local/`；已告知 Ren 老师并获得同意。
 3. **§1 留出集**：05、09、16、19 留作测试；B 级论文全部作为第二校验集。
-4. **待办**：23 号论文的一作在 Phase 1 中核实。
+4. **23 号与 05 号论文核实（Phase 1 已确认）**：23 号一作为 Xu Zhang（B 级，Ren 为通讯作者）；05 号发表于 *Materials Research Innovations*（2015，Vol. 19, Suppl. 5, pp. S5-127–S5-132）。
