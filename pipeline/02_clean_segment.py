@@ -209,7 +209,9 @@ def clean_symbols(text: str, paper_id: str, fixes: Counter[str]) -> str:
     fixes["broken_symbols"] += n
     text, n = re.subn(r"(accuracy\s+of\s+)71%", r"\1±1%", text, flags=re.I)
     fixes["broken_symbols"] += n
-    text, n = re.subn(r"\b6172%\s*RH\b", "61±2% RH", text)
+    text, n = re.subn(r"\b6172%", "61±2%", text)
+    fixes["broken_symbols"] += n
+    text, n = re.subn(r"\b8000\s+10,000,", "8000, 10,000,", text)
     fixes["broken_symbols"] += n
     text, n = re.subn(r"(\d)\s*\x01\s*(\d)", r"\1–\2", text)
     fixes["broken_symbols"] += n
@@ -327,7 +329,7 @@ SPLIT_NUM_HEADING_RE = re.compile(
 
 INLINE_HEADING_PATTERNS = [
     # Abstract—..., ABSTRACT ..., SUMMARY ...
-    re.compile(r"^(?P<head>Abstract|ABSTRACT|SUMMARY)\s*(?:[—–\-:]|\n)\s*(?P<body>.+)$", re.S),
+    re.compile(r"^(?P<head>Abstract|ABSTRACT|SUMMARY)\s*(?:[—–\-:]|\s+)\s*(?P<body>[A-Z].+)$", re.S),
     # I. INTRODUCTION\n..., II. EXPERIMENTAL DETAILS\nA. TEST RIG\n..., V. CONCLUSION\n...
     re.compile(
         r"^(?P<head>(?:[IVX]{1,4}\.|[1-6](?:\.\d+)?\.?|[A-F]\.)\s+[A-Z][A-Z0-9\s,&/\-–()]{2,75}?)\s*\n+\s*(?P<body>.+)$",
