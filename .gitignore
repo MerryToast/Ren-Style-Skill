@@ -1,0 +1,28 @@
+# ---- Copyrighted corpus & derived full text: NEVER commit ----
+*.pdf
+data/*
+!data/README.md
+**/examples.local/*
+!**/examples.local/README.md
+
+# ---- Local config (contains local corpus path) ----
+config.yaml
+
+# ---- Eval raw outputs may contain corpus text ----
+eval/results/raw/
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ---- OS / IDE ----
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

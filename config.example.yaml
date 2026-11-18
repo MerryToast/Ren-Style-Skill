@@ -1,0 +1,68 @@
+# Copy this file to config.yaml (gitignored) and edit corpus_dir if needed.
+#   Copy-Item config.example.yaml config.yaml
+
+author:
+  name: Wanbin Ren
+  name_zh: 任万滨
+  affiliation: School of Electrical Engineering and Automation, Harbin Institute of Technology
+
+corpus_dir: "E:/张寅楠/03.个人文件夹/04.实验室论文集"   # only *.pdf are read; files are never modified
+data_dir: data
+
+# Tier weights used in stylometry (see docs/design_notes.md §1)
+tier_weights:
+  S: 3.0   # designated core exemplars
+  A: 1.0   # Ren first author
+  B: 0.3   # Ren corresponding author only (students first author) -> reference / secondary validation
+
+# Style policy (see docs/design_notes.md §2.2) — decided: imitate style, fix grammar
+fidelity_level: balanced   # balanced | strict
+
+# Paper registry. `prefix` = leading number of the PDF filename (e.g. "01-....pdf", "12.pdf").
+# split: train | heldout | secondary
+# dup_group: papers sharing a group are near-duplicates -> down-weighted and split together.
+papers:
+  - {id: P01, prefix: "01", tier: S, split: train,     venue: "Elsevier (tribology)", year: 2013, short: "Current load, wear & fretting corrosion of Au-plated contacts"}
+  - {id: P02, prefix: "02", tier: A, split: train,     venue: "IEICE Trans. Electron.", year: 2014, short: "Sphere indenter, contact resistance of flat rivets"}
+  - {id: P03, prefix: "03", tier: S, split: train,     venue: "Elsevier (tribology)", year: 2014, short: "Fretting regimes vs amplitude/frequency"}
+  - {id: P04, prefix: "04", tier: A, split: train,     venue: "Elsevier (tribology)", year: 2014, short: "Temperature effects on fretting corrosion"}
+  - {id: P05, prefix: "05", tier: A, split: heldout,   venue: "TBD", year: null, short: "Frequency & intermittent failure under fretting"}
+  - {id: P06, prefix: "06", tier: A, split: train,     venue: "IEICE Trans. Electron.", year: 2015, short: "Super-low making/breaking velocity (preliminary)", dup_group: superlow}
+  - {id: P07, prefix: "07", tier: A, split: train,     venue: "IEEE TCPMT", year: 2015, short: "Surface adhesion at superlow speed", dup_group: superlow}
+  - {id: P08, prefix: "08", tier: A, split: train,     venue: "IEEE TCPMT", year: 2016, short: "Intermittent molten bridge, superlow opening speed", dup_group: molten_bridge}
+  - {id: P09, prefix: "09", tier: A, split: heldout,   venue: "IEEE TED", year: 2016, short: "Temperature-voltage relation, Kohlrausch correction"}
+  - {id: P10, prefix: "10", tier: A, split: train,     venue: "Plasma Sci. Technol.", year: 2016, short: "Molten bridge formation, super-low breaking velocity", dup_group: molten_bridge}
+  - {id: P11, prefix: "11", tier: A, split: train,     venue: "J. Adhesion", year: 2016, short: "uN-level adhesion force of Au-coated materials"}
+  - {id: P12, prefix: "12", tier: A, split: train,     venue: "Rev. Sci. Instrum.", year: 2016, short: "Contact bounce & dynamic welding of relays", skip_pages: [1]}
+  - {id: P13, prefix: "13", tier: S, split: train,     venue: "IEEE TED", year: 2016, short: "ECR of coated spherical contacts"}
+  - {id: P14, prefix: "14", tier: A, split: train,     venue: "IEEE TCPMT", year: 2017, short: "Fretting, high-frequency vibration & temperature"}
+  - {id: P15, prefix: "15", tier: A, split: train,     venue: "IEEE TCPMT", year: 2017, short: "Initial unstable electrical contact behaviors"}
+  - {id: P16, prefix: "16", tier: A, split: heldout,   venue: "IEEE TCPMT", year: 2018, short: "Switching under capacitive load"}
+  - {id: P17, prefix: "17", tier: B, split: secondary, venue: "IEEE TCPMT", year: 2018, short: "a-spots & electrodynamic repulsion force"}
+  - {id: P18, prefix: "18", tier: B, split: secondary, venue: "IEEE Access (OA)", year: 2019, short: "Electrical load & welding of AgSnO2 in DC relays", open_access: true}
+  - {id: P19, prefix: "19", tier: A, split: heldout,   venue: "IEEE TCPMT (accepted)", year: 2019, short: "Connector ECR under mechanical vibration", strip_banner: true}
+  - {id: P20, prefix: "20", tier: B, split: secondary, venue: "IEEE TCPMT", year: 2019, short: "Contact sliding of flexible springs"}
+  - {id: P21, prefix: "21", tier: B, split: secondary, venue: "IEEE TCPMT", year: 2019, short: "Rod & spring static contact, MEMS relay"}
+  - {id: P22, prefix: "22", tier: A, split: train,     venue: "IEEE Access (OA)", year: 2020, short: "ECR of cambered-surface contact bodies", open_access: true}
+  - {id: P23, prefix: "23", tier: B, split: secondary, venue: "IEEE TIE (accepted)", year: 2020, short: "Contact welding of electromechanical relays", strip_banner: true, note: "first author TBD"}
+  - {id: P24, prefix: "24", tier: B, split: secondary, venue: "MDPI Materials (OA)", year: 2020, short: "Material welding, low-current switching", open_access: true}
+  - {id: P25, prefix: "25", tier: A, split: train,     venue: "Rev. Sci. Instrum.", year: 2020, short: "Welding strength under inrush current", skip_pages: [1]}
+  - {id: P26, prefix: "26", tier: B, split: secondary, venue: "Conference", year: null, short: "Novel welding evaluation method"}
+  - {id: P27, prefix: "27", tier: A, split: train,     venue: "Conference", year: null, short: "Elliptical asperity, rough surface contact"}
+  - {id: P28, prefix: "28", tier: B, split: secondary, venue: "Conference", year: null, short: "FEM with asperity interactions"}
+  - {id: P29, prefix: "29", tier: B, split: secondary, venue: "Conference", year: null, short: "Hot switching of connectors"}
+  - {id: P30, prefix: "30", tier: B, split: secondary, venue: "Conference", year: null, short: "AC arc & welding, general-purpose relay"}
+
+# Canonical section taxonomy (design_notes §3)
+sections:
+  abstract: [full]
+  introduction: [background, prior_work, gap, this_paper]
+  experimental: [test_rig, specimen, procedure]
+  modeling: [model_setup, derivation, validation]
+  results: [waveform, trend, surface_analysis]
+  mechanism: [explanation]
+  conclusion: [numbered, summary]
+
+# Generation limits used by the skill
+chunk_max_words: 800
+excerpt_words: [150, 250]

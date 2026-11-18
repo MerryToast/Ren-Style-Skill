@@ -1,0 +1,21 @@
+# Evaluation splits (docs/design_notes.md §1, §6 Phase 6) — decided 2026-11-17
+heldout:          # tier A, excluded from all example selection
+  - P05   # fretting, experimental (closest to tier S topics)
+  - P09   # simulation / theory, IEEE TED
+  - P16   # switching & welding, TCPMT 2018
+  - P19   # connector vibration, TCPMT 2019
+secondary:        # tier B (students first author): checks "Ren-specific" vs "group-average" style
+  - P17
+  - P18
+  - P20
+  - P21
+  - P23
+  - P24
+  - P26
+  - P28
+  - P29
+  - P30
+never_heldout:    # tier S anchors
+  - P01
+  - P03
+  - P13

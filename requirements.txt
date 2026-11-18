@@ -1,0 +1,17 @@
+# PDF extraction
+pymupdf>=1.24
+pypdf>=4.0
+
+# NLP / stylometry
+spacy>=3.7
+nltk>=3.8
+textstat>=0.7
+scikit-learn>=1.4
+numpy>=1.26
+pandas>=2.1
+
+# Config / IO
+pyyaml>=6.0
+
+# After install:
+#   python -m spacy download en_core_web_sm
