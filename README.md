@@ -160,7 +160,7 @@ python pipeline/07_pack_single_prompt.py
 - **Two-Layer Copyright Separation**:
   - **Zero full-text PDFs or copyrighted excerpts** are tracked in Git. Verbatim excerpts from publisher-copyrighted papers reside strictly inside the local, gitignored `skills/ren-style-skill/examples.local/` directory.
   - The public `skills/ren-style-skill/examples/` directory contains only open-access excerpts from `P22` (*IEEE Access* 2020, CC BY 4.0, attributed in [NOTICE.md](NOTICE.md)) and synthetic examples (`source: synthetic`).
-- **Author Consent & Academic Integrity**: Prof. Wanbin Ren (Harbin Institute of Technology) has been informed of and agreed to this project. This tool is designed to assist manuscript drafting, translation, and language polishing within the research group; users remain fully responsible for the scientific validity, factual accuracy, and originality of their publications.
+- **Author Consent & Academic Integrity**: This tool is designed to assist manuscript drafting, translation, and language polishing within the research group; users remain fully responsible for the scientific validity, factual accuracy, and originality of their publications.
 
 ## License
 
