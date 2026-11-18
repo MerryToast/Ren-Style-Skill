@@ -23,10 +23,11 @@ NUM = re.compile(r"(?<![A-Za-z\d.])[-+]?\d+(?:[.,]\d+)?(?:\s*[x×]\s*10\^?[-+]?\
 CIT = re.compile(r"\[(?:\d+(?:\s*[-–,]\s*\d+)*|CIT)\]")
 REF_EN = re.compile(r"\b(Fig(?:ure)?s?\.?|Table|Eq(?:uation)?s?\.?)\s*\(?(\d+[a-z]?)\)?", re.IGNORECASE)
 REF_ZH = re.compile(r"(图|表|式)\s*\(?(\d+[a-z]?)\)?")
-PLACEHOLDER = re.compile(r"\[(?:FIG|EQ|TAB)\s*\d*\]")
+PLACEHOLDER = re.compile(r"\[(FIG|EQ|TAB)\s*(\d*[a-z]?)\]", re.IGNORECASE)
 
 
 def norm_num(s: str) -> str:
+    s = re.sub(r"\s+", "", s).replace("×", "x")
     s = s.replace(",", "") if re.fullmatch(r"\d{1,3}(,\d{3})+", s) else s.replace(",", ".")
     try:
         f = float(s)
@@ -47,10 +48,10 @@ def norm_ref(kind: str, n: str) -> str:
 def extract(text: str, refs_only_numbers: bool) -> dict[str, Counter]:
     refs = Counter(norm_ref(k, n) for k, n in REF_EN.findall(text))
     refs += Counter(norm_ref(k, n) for k, n in REF_ZH.findall(text))
-    refs += Counter(PLACEHOLDER.findall(text))
+    refs += Counter(norm_ref(k, n) for k, n in PLACEHOLDER.findall(text))
     cits = Counter(re.sub(r"\s", "", c) for c in CIT.findall(text))
     # remove citation / reference numbers before counting plain numbers
-    stripped = CIT.sub(" ", REF_EN.sub(" ", REF_ZH.sub(" ", text)))
+    stripped = PLACEHOLDER.sub(" ", CIT.sub(" ", REF_EN.sub(" ", REF_ZH.sub(" ", text))))
     nums = Counter(norm_num(n.strip()) for n in NUM.findall(stripped))
     out = {"numbers": nums, "citations": cits}
     if not refs_only_numbers:
