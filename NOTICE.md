@@ -15,6 +15,6 @@ The author (Prof. Wanbin Ren, HIT) has been informed of and agreed to this proje
 
 | Paper | License | Used in |
 |---|---|---|
-| W. Ren, C. Zhang, X. Sun, "Electrical Contact Resistance of Contact Bodies With Cambered Surface," *IEEE Access*, 2020, doi:10.1109/ACCESS.2020.2994085 | CC BY 4.0 | _to be filled in Phase 4_ |
+| W. Ren, C. Zhang, X. Sun, "Electrical Contact Resistance of Contact Bodies With Cambered Surface," *IEEE Access*, vol. 8, pp. 93857–93867, 2020, doi:10.1109/ACCESS.2020.2994085 | CC BY 4.0 | `skills/ren-style-skill/examples/abstract/full_02_oa.md`, `skills/ren-style-skill/examples/introduction/background_02_oa.md`, `skills/ren-style-skill/examples/introduction/prior_work_02_oa.md`, `skills/ren-style-skill/examples/modeling/model_setup_02_oa.md`, `skills/ren-style-skill/examples/modeling/derivation_02_oa.md`, `skills/ren-style-skill/examples/modeling/validation_02_oa.md`, `skills/ren-style-skill/examples/results/trend_02_oa.md`, `skills/ren-style-skill/examples/conclusion/summary_02_oa.md`, `skills/ren-style-skill/examples/contrastive/pair_01_abstract.md`, `skills/ren-style-skill/examples/contrastive/pair_04_modeling_validation.md`, `skills/ren-style-skill/examples/contrastive/pair_06_results_trend.md`, `skills/ren-style-skill/examples/contrastive/pair_08_conclusion_summary.md` |
 
 <!-- Add one row per excerpted open-access paper. Verify the license on the publisher page before adding. -->

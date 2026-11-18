@@ -1,0 +1,10 @@
+---
+section: mechanism
+function: explanation
+source: synthetic
+moves: [M1_macroscopic_phenomenon_restatement, M2_multi_stage_physical_model, M3_coupled_driving_forces, M4_theoretical_criterion_and_regime_boundary]
+rules: [R01, R04, R05, R07, R28, R29, R30]
+notes: "Fictitious 3-stage physical degradation model for annular torsional fretting corrosion; demonstrates schematic figure reference, stage-by-stage mechanism, Mindlin-type stick-slip criterion, and 'This may be attributed to...' causal hedging."
+---
+
+Based on the electrical contact resistance waveforms and post-test SEM/EDX observations, the interfacial degradation process of the duplex Au/PdNi coating under rotational micro-slip can be explained by a three-stage physical model, as illustrated in [FIG 10]. According to the Cattaneo–Mindlin tangential contact theory [CIT], when the applied torque T is below the limiting friction torque, the circular contact area splits into a central stick zone of radius c and an outer annular slip zone (c < r ≤ a). Within the outer annulus, the local slip amplitude increases linearly with the radial coordinate r. During Stage I ([FIG 10](a)), rotational micro-slip remains confined to the outer annulus. The thin gold flash is rapidly sheared off in this outer ring, whereas the central stick core maintains low-resistance metallic conduction. As cycling proceeds into Stage II ([FIG 10](b)), abrasive wear in the outer annulus penetrates the palladium-nickel layer and exposes the nickel underlayer and copper alloy substrate. Fine copper and nickel wear particles oxidize rapidly under frictional heating and form an insulating ring along the periphery. Consequently, current streamlines constrict toward the shrinking central stick zone. In Stage III ([FIG 10](c)), oxidized debris gradually migrates inward into the central core; this may be attributed to radial pumping under cyclic normal vibration. Once the insulating oxide film covers the central conducting a-spots, the contact resistance rises abruptly above 1.0 Ω.

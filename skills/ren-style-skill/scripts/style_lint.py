@@ -60,6 +60,11 @@ def main() -> int:
     args = ap.parse_args()
 
     text = sys.stdin.read() if args.file == "-" else Path(args.file).read_text(encoding="utf-8")
+    text = re.sub(r"\A---\r?\n.*?\r?\n---\r?\n*", "", text, flags=re.DOTALL)
+    text = re.sub(r"<!--.*?-->", "", text, flags=re.DOTALL).strip()
+    m_ren = re.search(r"^###\s+Ren\s*\r?\n(.*?)(?=^###\s+|\Z)", text, flags=re.MULTILINE | re.DOTALL)
+    if m_ren:
+        text = m_ren.group(1).strip()
     try:
         profile = json.loads(PROFILE.read_text(encoding="utf-8"))
     except Exception as e:  # noqa: BLE001
