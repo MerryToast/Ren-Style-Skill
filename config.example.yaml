@@ -22,36 +22,376 @@ fidelity_level: balanced   # balanced | strict
 # split: train | heldout | secondary
 # dup_group: papers sharing a group are near-duplicates -> down-weighted and split together.
 papers:
-  - {id: P01, prefix: "01", tier: S, split: train,     venue: "Elsevier (tribology)", year: 2013, short: "Current load, wear & fretting corrosion of Au-plated contacts"}
-  - {id: P02, prefix: "02", tier: A, split: train,     venue: "IEICE Trans. Electron.", year: 2014, short: "Sphere indenter, contact resistance of flat rivets"}
-  - {id: P03, prefix: "03", tier: S, split: train,     venue: "Elsevier (tribology)", year: 2014, short: "Fretting regimes vs amplitude/frequency"}
-  - {id: P04, prefix: "04", tier: A, split: train,     venue: "Elsevier (tribology)", year: 2014, short: "Temperature effects on fretting corrosion"}
-  - {id: P05, prefix: "05", tier: A, split: heldout,   venue: "TBD", year: null, short: "Frequency & intermittent failure under fretting"}
-  - {id: P06, prefix: "06", tier: A, split: train,     venue: "IEICE Trans. Electron.", year: 2015, short: "Super-low making/breaking velocity (preliminary)", dup_group: superlow}
-  - {id: P07, prefix: "07", tier: A, split: train,     venue: "IEEE TCPMT", year: 2015, short: "Surface adhesion at superlow speed", dup_group: superlow}
-  - {id: P08, prefix: "08", tier: A, split: train,     venue: "IEEE TCPMT", year: 2016, short: "Intermittent molten bridge, superlow opening speed", dup_group: molten_bridge}
-  - {id: P09, prefix: "09", tier: A, split: heldout,   venue: "IEEE TED", year: 2016, short: "Temperature-voltage relation, Kohlrausch correction"}
-  - {id: P10, prefix: "10", tier: A, split: train,     venue: "Plasma Sci. Technol.", year: 2016, short: "Molten bridge formation, super-low breaking velocity", dup_group: molten_bridge}
-  - {id: P11, prefix: "11", tier: A, split: train,     venue: "J. Adhesion", year: 2016, short: "uN-level adhesion force of Au-coated materials"}
-  - {id: P12, prefix: "12", tier: A, split: train,     venue: "Rev. Sci. Instrum.", year: 2016, short: "Contact bounce & dynamic welding of relays", skip_pages: [1]}
-  - {id: P13, prefix: "13", tier: S, split: train,     venue: "IEEE TED", year: 2016, short: "ECR of coated spherical contacts"}
-  - {id: P14, prefix: "14", tier: A, split: train,     venue: "IEEE TCPMT", year: 2017, short: "Fretting, high-frequency vibration & temperature"}
-  - {id: P15, prefix: "15", tier: A, split: train,     venue: "IEEE TCPMT", year: 2017, short: "Initial unstable electrical contact behaviors"}
-  - {id: P16, prefix: "16", tier: A, split: heldout,   venue: "IEEE TCPMT", year: 2018, short: "Switching under capacitive load"}
-  - {id: P17, prefix: "17", tier: B, split: secondary, venue: "IEEE TCPMT", year: 2018, short: "a-spots & electrodynamic repulsion force"}
-  - {id: P18, prefix: "18", tier: B, split: secondary, venue: "IEEE Access (OA)", year: 2019, short: "Electrical load & welding of AgSnO2 in DC relays", open_access: true}
-  - {id: P19, prefix: "19", tier: A, split: heldout,   venue: "IEEE TCPMT (accepted)", year: 2019, short: "Connector ECR under mechanical vibration", strip_banner: true}
-  - {id: P20, prefix: "20", tier: B, split: secondary, venue: "IEEE TCPMT", year: 2019, short: "Contact sliding of flexible springs"}
-  - {id: P21, prefix: "21", tier: B, split: secondary, venue: "IEEE TCPMT", year: 2019, short: "Rod & spring static contact, MEMS relay"}
-  - {id: P22, prefix: "22", tier: A, split: train,     venue: "IEEE Access (OA)", year: 2020, short: "ECR of cambered-surface contact bodies", open_access: true}
-  - {id: P23, prefix: "23", tier: B, split: secondary, venue: "IEEE TIE (accepted)", year: 2020, short: "Contact welding of electromechanical relays", strip_banner: true, note: "first author TBD"}
-  - {id: P24, prefix: "24", tier: B, split: secondary, venue: "MDPI Materials (OA)", year: 2020, short: "Material welding, low-current switching", open_access: true}
-  - {id: P25, prefix: "25", tier: A, split: train,     venue: "Rev. Sci. Instrum.", year: 2020, short: "Welding strength under inrush current", skip_pages: [1]}
-  - {id: P26, prefix: "26", tier: B, split: secondary, venue: "Conference", year: null, short: "Novel welding evaluation method"}
-  - {id: P27, prefix: "27", tier: A, split: train,     venue: "Conference", year: null, short: "Elliptical asperity, rough surface contact"}
-  - {id: P28, prefix: "28", tier: B, split: secondary, venue: "Conference", year: null, short: "FEM with asperity interactions"}
-  - {id: P29, prefix: "29", tier: B, split: secondary, venue: "Conference", year: null, short: "Hot switching of connectors"}
-  - {id: P30, prefix: "30", tier: B, split: secondary, venue: "Conference", year: null, short: "AC arc & welding, general-purpose relay"}
+  - id: P01
+    prefix: "01"
+    tier: S
+    split: train
+    first_author: "Wanbin Ren"
+    authors: "Wanbin Ren, Peng Wang, Jian Song, Guofu Zhai"
+    venue: "Tribology International"
+    year: 2013
+    doi: "10.1016/j.triboint.2013.09.024"
+    title: "Effects of current load on wear and fretting corrosion of gold-plated electrical contacts"
+    short: "Current load, wear & fretting corrosion of Au-plated contacts"
+
+  - id: P02
+    prefix: "02"
+    tier: A
+    split: train
+    first_author: "Wanbin Ren"
+    authors: "Wanbin Ren, Yu Chen, Shengjun Xue, Guenther Horn, Guofu Zhai"
+    venue: "IEICE Trans. Electron."
+    year: 2014
+    doi: "10.1587/transele.E97.C.966"
+    title: "Experimental Investigation and Numerical Simulation on the Role of Sphere Indenter in Measuring Contact Resistance of Flat Rivets"
+    short: "Sphere indenter, contact resistance of flat rivets"
+
+  - id: P03
+    prefix: "03"
+    tier: S
+    split: train
+    first_author: "Wanbin Ren"
+    authors: "Wanbin Ren, Yingwei Du, Li Cui, Peng Wang, Jian Song"
+    venue: "Wear"
+    year: 2014
+    doi: "10.1016/j.wear.2014.10.009"
+    title: "Research on fretting regimes of gold-plated copper alloy electrical contact material under different vibration amplitude and frequency combinations"
+    short: "Fretting regimes vs amplitude/frequency"
+
+  - id: P04
+    prefix: "04"
+    tier: A
+    split: train
+    first_author: "Wanbin Ren"
+    authors: "Wanbin Ren, Peng Wang, Yinghua Fu, Cunfa Pan, Jian Song"
+    venue: "Tribology International"
+    year: 2014
+    doi: "10.1016/j.triboint.2014.11.001"
+    title: "Effects of temperature on fretting corrosion behaviors of gold-plated copper alloy electrical contacts"
+    short: "Temperature effects on fretting corrosion"
+
+  - id: P05
+    prefix: "05"
+    tier: A
+    split: heldout
+    first_author: "Wanbin Ren"
+    authors: "W. Ren, J. Wei, X. Ma, L. Cui"
+    venue: "Materials Research Innovations"
+    year: 2015
+    doi: "10.1179/1432891715Z.0000000001348"
+    title: "Effects of frequency on the intermittent failure phenomena of gold-plated electrical contact materials under fretting conditions"
+    short: "Frequency & intermittent failure under fretting"
+
+  - id: P06
+    prefix: "06"
+    tier: A
+    split: train
+    first_author: "Wanbin Ren"
+    authors: "Wanbin Ren, Shengjun Xue, Hongxu Zhi, Guofu Zhai"
+    venue: "IEICE Trans. Electron."
+    year: 2015
+    doi: "10.1587/transele.E98.C.364"
+    dup_group: superlow
+    title: "Preliminary Study of Electrical Contact Behaviors of Au-plated Material at Super Low Making/Breaking Velocity"
+    short: "Super-low making/breaking velocity (preliminary)"
+
+  - id: P07
+    prefix: "07"
+    tier: A
+    split: train
+    first_author: "Wanbin Ren"
+    authors: "Wanbin Ren, Cheng Chang, Yu Chen, Shengjun Xue, Ronald A. Coutu, Jr."
+    venue: "IEEE TCPMT"
+    year: 2015
+    doi: "10.1109/TCPMT.2015.2431494"
+    dup_group: superlow
+    title: "Investigation of the Surface Adhesion Phenomena and Mechanism of Gold-Plated Contacts at Superlow Making/Breaking Speed"
+    short: "Surface adhesion at superlow speed"
+
+  - id: P08
+    prefix: "08"
+    tier: A
+    split: train
+    first_author: "Wanbin Ren"
+    authors: "Wanbin Ren, Hai Wang, Cheng Chang, Shengjun Xue, Yu Chen"
+    venue: "IEEE TCPMT"
+    year: 2016
+    doi: "10.1109/TCPMT.2016.2530118"
+    dup_group: molten_bridge
+    title: "Experimental Investigation and Understanding of the Intermittent Molten Bridge Phenomena and Mechanism of Contacts With Superlow Opening Speed"
+    short: "Intermittent molten bridge, superlow opening speed"
+
+  - id: P09
+    prefix: "09"
+    tier: A
+    split: heldout
+    first_author: "Wanbin Ren"
+    authors: "Wanbin Ren, Jianmin Wei, Xiangxing Meng, Hongxu Zhi"
+    venue: "IEEE TED"
+    year: 2016
+    doi: "10.1109/TED.2016.2517637"
+    title: "Numerical Simulation of Temperature–Voltage Relation in Electrical Contacts and Correction of Classical Kohlrausch's Equation"
+    short: "Temperature-voltage relation, Kohlrausch correction"
+
+  - id: P10
+    prefix: "10"
+    tier: A
+    split: train
+    first_author: "Wanbin Ren"
+    authors: "Wanbin Ren, Cheng Chang, Yu Chen"
+    venue: "Plasma Sci. Technol."
+    year: 2016
+    doi: "10.1088/1009-0630/18/3/04"
+    dup_group: molten_bridge
+    title: "Formation Process of Intermittent Molten Bridge Between Au-Plated Contacts at Super Low Breaking Velocity"
+    short: "Molten bridge formation, super-low breaking velocity"
+
+  - id: P11
+    prefix: "11"
+    tier: A
+    split: train
+    first_author: "Wanbin Ren"
+    authors: "Wanbin Ren, Yu Chen, Zhaobin Wang, Chao Zhang, Guofu Zhai"
+    venue: "J. Adhesion"
+    year: 2016
+    doi: "10.1080/00218464.2016.1197125"
+    title: "Investigation of the μN level adhesion force characteristics of gold-coated materials in air"
+    short: "uN-level adhesion force of Au-coated materials"
+
+  - id: P12
+    prefix: "12"
+    tier: A
+    split: train
+    first_author: "Wanbin Ren"
+    authors: "Wanbin Ren, Yuan He, Jianbing Jin, Sida Man"
+    venue: "Rev. Sci. Instrum."
+    year: 2016
+    doi: "10.1063/1.4953838"
+    skip_pages: [1]
+    title: "Investigations of the contact bounce behaviors and relative dynamic welding phenomena for electromechanical relay"
+    short: "Contact bounce & dynamic welding of relays"
+
+  - id: P13
+    prefix: "13"
+    tier: S
+    split: train
+    first_author: "Wanbin Ren"
+    authors: "Wanbin Ren, Yu Chen, Zhaobin Wang, Shengjun Xue, Xu Zhang"
+    venue: "IEEE TED"
+    year: 2016
+    doi: "10.1109/TED.2016.2612545"
+    title: "Electrical Contact Resistance of Coated Spherical Contacts"
+    short: "ECR of coated spherical contacts"
+
+  - id: P14
+    prefix: "14"
+    tier: A
+    split: train
+    first_author: "Wanbin Ren"
+    authors: "Wanbin Ren, Xu Zhang, Xiangxing Meng"
+    venue: "IEEE TCPMT"
+    year: 2017
+    doi: "10.1109/TCPMT.2017.2657694"
+    title: "Fretting Behavior of Gold-Plated Contact Materials Used in High-Frequency Vibration and Different Temperature Environment"
+    short: "Fretting, high-frequency vibration & temperature"
+
+  - id: P15
+    prefix: "15"
+    tier: A
+    split: train
+    first_author: "Wanbin Ren"
+    authors: "Wanbin Ren, Nan Jiang, Cheng Chang, Shengjun Xue, Yu Chen, Ronald A. Coutu, Jr."
+    venue: "IEEE TCPMT"
+    year: 2017
+    doi: "10.1109/TCPMT.2017.2695800"
+    title: "Observation and Understanding of the Initial Unstable Electrical Contact Behaviors"
+    short: "Initial unstable electrical contact behaviors"
+
+  - id: P16
+    prefix: "16"
+    tier: A
+    split: heldout
+    first_author: "Wanbin Ren"
+    authors: "Wanbin Ren, Xu Zhang, Tengyu Wang, Jianmin Wei"
+    venue: "IEEE TCPMT"
+    year: 2018
+    doi: "10.1109/TCPMT.2018.2868102"
+    title: "Study on Switching Characteristics and Associated Degradation Mechanism of Contact Material Under Capacitive Load"
+    short: "Switching under capacitive load"
+
+  - id: P17
+    prefix: "17"
+    tier: B
+    split: secondary
+    first_author: "Lianke Zhou"
+    authors: "Lianke Zhou, Sida Man, Zhaobin Wang, Shengjun Xue, Wanbin Ren"
+    venue: "IEEE TCPMT"
+    year: 2018
+    doi: "10.1109/TCPMT.2018.2869993"
+    title: "On the Relationship Between Contact a-Spots Features and Electrodynamic Repulsion Force for Electrical Apparatus"
+    short: "a-spots & electrodynamic repulsion force"
+
+  - id: P18
+    prefix: "18"
+    tier: B
+    split: secondary
+    first_author: "Xu Zhang"
+    authors: "Xu Zhang, Wanbin Ren, Zhe Zheng, Shujuan Wang"
+    venue: "IEEE Access (OA)"
+    year: 2019
+    doi: "10.1109/ACCESS.2019.2940966"
+    open_access: true
+    title: "Effect of Electrical Load on Contact Welding Failure of Silver Tin Oxide Material Used in DC Electromechanical Relays"
+    short: "Electrical load & welding of AgSnO2 in DC relays"
+
+  - id: P19
+    prefix: "19"
+    tier: A
+    split: heldout
+    first_author: "Wanbin Ren"
+    authors: "Wanbin Ren, Danyang Du, Yang Du"
+    venue: "IEEE TCPMT (accepted)"
+    year: 2019
+    doi: "10.1109/TCPMT.2019.2935478"
+    strip_banner: true
+    title: "Electrical contact resistance (ECR) of connector response to mechanical vibration environment"
+    short: "Connector ECR under mechanical vibration"
+
+  - id: P20
+    prefix: "20"
+    tier: B
+    split: secondary
+    first_author: "Chao Zhang"
+    authors: "Chao Zhang, Wanbin Ren, Tengyu Wang"
+    venue: "IEEE TCPMT"
+    year: 2019
+    doi: "10.1109/TCPMT.2019.2907315"
+    title: "Modeling and Experimental Verification of Contact Sliding Behavior for Flexible Spring Components Within Electromechanical Relays"
+    short: "Contact sliding of flexible springs"
+
+  - id: P21
+    prefix: "21"
+    tier: B
+    split: secondary
+    first_author: "Chao Zhang"
+    authors: "Chao Zhang, Wanbin Ren, Fubiao Luo"
+    venue: "IEEE TCPMT"
+    year: 2019
+    doi: "10.1109/TCPMT.2019.2920143"
+    title: "Understanding of the Static Contact Behaviors of Rod and Spring for Microelectromechanical Relay"
+    short: "Rod & spring static contact, MEMS relay"
+
+  - id: P22
+    prefix: "22"
+    tier: A
+    split: train
+    first_author: "Wanbin Ren"
+    authors: "Wanbin Ren, Chao Zhang, Xilai Sun"
+    venue: "IEEE Access (OA)"
+    year: 2020
+    doi: "10.1109/ACCESS.2020.2994085"
+    open_access: true
+    title: "Electrical Contact Resistance of Contact Bodies With Cambered Surface"
+    short: "ECR of cambered-surface contact bodies"
+
+  - id: P23
+    prefix: "23"
+    tier: B
+    split: secondary
+    first_author: "Xu Zhang"
+    authors: "Xu Zhang, Wanbin Ren, Shujuan Wang"
+    venue: "IEEE TIE (accepted)"
+    year: 2020
+    doi: "10.1109/TIE.2020.3009565"
+    strip_banner: true
+    title: "Experimental Investigation of Contact Welding Characteristics of Electromechanical Relays"
+    short: "Contact welding of electromechanical relays"
+
+  - id: P24
+    prefix: "24"
+    tier: B
+    split: secondary
+    first_author: "Xu Zhang"
+    authors: "Xu Zhang, Wanbin Ren"
+    venue: "MDPI Materials (OA)"
+    year: 2020
+    doi: "10.3390/ma13173666"
+    open_access: true
+    title: "Modeling and Experimental Verification of Material Welding Characteristics for Low Current Switching Devices"
+    short: "Material welding, low-current switching"
+
+  - id: P25
+    prefix: "25"
+    tier: A
+    split: train
+    first_author: "Wanbin Ren"
+    authors: "Wanbin Ren, Xu Zhang"
+    venue: "Rev. Sci. Instrum."
+    year: 2020
+    doi: "10.1063/5.0021393"
+    skip_pages: [1]
+    title: "Contact welding strength measurement for metal electrode materials conducting inrush electrical current"
+    short: "Welding strength under inrush current"
+
+  - id: P26
+    prefix: "26"
+    tier: B
+    split: secondary
+    first_author: "Xu Zhang"
+    authors: "Xu Zhang, Wanbin Ren, Duanlin Jiang, Yinghua Fu, Yide Cai"
+    venue: "Conference (manuscript)"
+    year: 2020
+    doi: ""
+    title: "A novel experimental evaluation method of welding characteristics for contact materials"
+    short: "Novel welding evaluation method"
+
+  - id: P27
+    prefix: "27"
+    tier: A
+    split: train
+    first_author: "Wanbin Ren"
+    authors: "Wanbin Ren, Chao Zhang, Fubiao Luo, Zhen Wei"
+    venue: "Conference (manuscript)"
+    year: 2020
+    doi: ""
+    title: "An improved method to identify the evolution of rough surface contact by the elliptical asperity"
+    short: "Elliptical asperity, rough surface contact"
+
+  - id: P28
+    prefix: "28"
+    tier: B
+    split: secondary
+    first_author: "Chao Zhang"
+    authors: "Chao Zhang, Wanbin Ren, Guotao Wang"
+    venue: "Conference (manuscript)"
+    year: 2020
+    doi: ""
+    title: "A Finite Element Method to Investigate Electrical Contact Behaviors Considering Asperity Interactions"
+    short: "FEM with asperity interactions"
+
+  - id: P29
+    prefix: "29"
+    tier: B
+    split: secondary
+    first_author: "Tianyang Wang"
+    authors: "Tianyang Wang, Ming Li, Yuan Meng, Wanbin Ren"
+    venue: "IEEE PHM-2020 Jinan"
+    year: 2020
+    doi: "10.1109/PHM-Jinan48558.2020.00068"
+    title: "Experimental Investigation on the Hot Switching Capability and Associated Failure Mechanism of Electrical Connectors"
+    short: "Hot switching of connectors"
+
+  - id: P30
+    prefix: "30"
+    tier: B
+    split: secondary
+    first_author: "Zhe Zheng"
+    authors: "Zhe Zheng, Tianyang Wang, Xu Zhang, Wanbin Ren"
+    venue: "Conference (manuscript)"
+    year: 2020
+    doi: ""
+    title: "Experimental investigation of alternating current arc behavior and associated contact welding failure for general-purpose relay"
+    short: "AC arc & welding, general-purpose relay"
 
 # Canonical section taxonomy (design_notes §3)
 sections:
